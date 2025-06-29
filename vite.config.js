@@ -50,6 +50,10 @@ export default defineConfig(({ command }) => {
           isBuild &&
             purgecss.default({
               content: ['./src/**/*.html', './src/js/**/*.js'],
+              safelist: {
+                standard: ['is-active', 'is-visible'],
+                deep: [/swiper/, /modal/],
+              },
             }),
         ].filter(Boolean),
       },
