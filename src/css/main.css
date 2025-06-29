@@ -1,4 +1,6 @@
-﻿/* --- Загальні стилі --- */
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+/* --- Загальні стилі --- */
 :root {
   --background-color: #f0f2f5;
   --container-bg-color: #ffffff;

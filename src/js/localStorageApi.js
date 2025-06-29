@@ -1,9 +1,9 @@
 // API для роботи з localStorage
-const storageAPI = {
+export const storageAPI = {
   /**
-   * Зберігає дані у localStorage.
-   * @param {string} key - Ключ для збереження.
-   * @param {any} value - Значення для збереження.
+   * Сохраняет данные в localStorage.
+   * @param {string} key - Ключ для сохранения.
+   * @param {any} value - Значение для сохранения.
    */
   save(key, value) {
     try {
@@ -14,9 +14,9 @@ const storageAPI = {
     }
   },
   /**
-   * Завантажує дані з localStorage.
-   * @param {string} key - Ключ для завантаження.
-   * @returns {any | undefined} - Розпарсені дані або undefined, якщо сталася помилка.
+   * Загружает данные из localStorage.
+   * @param {string} key - Ключ для загрузки.
+   * @returns {any | undefined} - Распарсенные данные или undefined, если произошла ошибка.
    */
   load(key) {
     try {
@@ -29,6 +29,6 @@ const storageAPI = {
   },
 };
 
-// Ключі для localStorage
-const TASKS_STORAGE_KEY = 'todo-tasks';
-const THEME_STORAGE_KEY = 'theme';
+// Ключи для localStorage
+export const TASKS_STORAGE_KEY = 'todo-tasks';
+export const THEME_STORAGE_KEY = 'theme';

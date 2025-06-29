@@ -1,21 +1,24 @@
 // Логіка управління завданнями
+import { storageAPI, TASKS_STORAGE_KEY } from './localStorageApi.js';
+import renderModule from './renderTasks.js';
+
 const tasksModule = {
   tasks: storageAPI.load(TASKS_STORAGE_KEY) || [],
 
   /**
-   * Ініціалізує список завдань при завантаженні сторінки.
+   * Инициализирует список задач при загрузке страницы.
    */
   init() {
     renderModule.renderTasks(this.tasks);
   },
   /**
-   * Додає нове завдання.
-   * @param {string} title - Назва завдання.
-   * @param {string} text - Текст завдання.
+   * Добавляет новую задачу.
+   * @param {string} title - Название задачи.
+   * @param {string} text - Текст задачи.
    */
   addTask(title, text) {
     if (!title.trim() || !text.trim()) {
-      alert('Назва та опис завдання не можуть бути порожніми!');
+      alert('Название и описание задачи не могут быть пустыми!');
       return;
     }
 
@@ -29,18 +32,20 @@ const tasksModule = {
     this.saveAndRerender();
   },
   /**
-   * Видаляє завдання за його ID.
-   * @param {number} taskId - ID завдання для видалення.
+   * Удаляет задачу по её ID.
+   * @param {number} taskId - ID задачи для удаления.
    */
   deleteTask(taskId) {
     this.tasks = this.tasks.filter(task => task.id !== taskId);
     this.saveAndRerender();
   },
   /**
-   * Зберігає поточний стан завдань у localStorage та перерендерить список.
+   * Сохраняет текущее состояние задач в localStorage и перерисовывает список.
    */
   saveAndRerender() {
     storageAPI.save(TASKS_STORAGE_KEY, this.tasks);
     renderModule.renderTasks(this.tasks);
   },
 };
+
+export default tasksModule;

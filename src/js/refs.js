@@ -7,3 +7,5 @@ const refs = {
   themeSwitcher: document.getElementById('theme-switcher'),
   body: document.body,
 };
+
+export default refs;
