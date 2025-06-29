@@ -51,12 +51,7 @@ export default defineConfig(({ command }) => {
             purgecss.default({
               content: ['./src/**/*.html', './src/js/**/*.js'],
               safelist: {
-                standard: [
-                  'is-active',
-                  'is-visible',
-                  'body.dark',
-                  'theme-switch',
-                ],
+                standard: ['is-active', 'is-visible', 'dark', 'theme-switch'],
                 deep: [/swiper/, /modal/],
               },
             }),
