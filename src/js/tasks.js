@@ -1,5 +1,5 @@
-import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
+import iziToast from 'izitoast'; // Імпорт бібліотеки для сповіщень
+import 'izitoast/dist/css/iziToast.min.css'; // Імпорт стилів iziToast
 
 // Логіка управління завданнями
 import { storageAPI, TASKS_STORAGE_KEY } from './localStorageApi.js';

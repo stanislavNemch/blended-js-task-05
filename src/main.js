@@ -1,6 +1,5 @@
-// Імпорт бібліотек
-// Імпорт стилів iziToast
-import 'izitoast/dist/css/iziToast.min.css';
+import iziToast from 'izitoast'; // Імпорт бібліотеки для сповіщень
+import 'izitoast/dist/css/iziToast.min.css'; // Імпорт стилів iziToast
 
 import './css/main.css';
 import './css/styles.css';
