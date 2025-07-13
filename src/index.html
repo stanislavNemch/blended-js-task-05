@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link href="./img/favicon.ico" rel="icon" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Перелік справ</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Мої справи</h1>
+      <button class="theme-switch" id="theme-switcher" aria-label="Перемкнути тему">☀️</button>
+    </header>
+
+    <form id="task-form">
+      <div class="form-inputs">
+        <input type="text" id="task-title-input" placeholder="Назва завдання...">
+        <input type="text" id="task-text-input" placeholder="Опис завдання...">
+      </div>
+      <button type="submit" class="btn btn-add">Додати</button>
+    </form>
+
+    <ul id="task-list">
+      <!-- Завдання будуть рендеритись тут -->
+    </ul>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>
