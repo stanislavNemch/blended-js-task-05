@@ -1,6 +1,5 @@
 // API для роботи з localStorage
 import iziToast from 'izitoast'; // Імпорт бібліотеки для сповіщень
-import './css/styles.css'; // Імпорт стилів iziToast
 
 export const storageAPI = {
   /**

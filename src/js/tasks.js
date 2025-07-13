@@ -1,5 +1,4 @@
 import iziToast from 'izitoast'; // Імпорт бібліотеки для сповіщень
-import './css/styles.css'; // Імпорт стилів iziToast
 
 // Логіка управління завданнями
 import { storageAPI, TASKS_STORAGE_KEY } from './localStorageApi.js';
