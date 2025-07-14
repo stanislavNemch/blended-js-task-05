@@ -25,7 +25,7 @@ const renderModule = {
   renderTasks(tasks) {
     if (tasks.length === 0) {
       refs.taskList.innerHTML =
-        '<p class="placeholder-text">Список задач пуст. Добавьте что-нибудь!</p>';
+        '<p class="placeholder-text">Список завдань порожній. Додати щось!</p>';
     } else {
       const markup = tasks.map(this.createTaskMarkup).join('');
       refs.taskList.innerHTML = markup;
